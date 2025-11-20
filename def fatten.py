@@ -1,9 +1,12 @@
 def fatten(n):
-    copyn = n
-    flipn = "0"
-    while n // 10 != 0:
-        flipn = flipn + str(n % 10)
-        n = n //10
-    flipn = flipn + str(n % 10)
-    return int(flipn)
-#no acabat i no funciona per a 1200 o 900 ja que flipn = 21 o 9
+    n = str(n)
+    prev = 0
+    num = ''
+    for c in n:
+        digit = int(c)
+        if digit < prev:
+            num += str(prev)
+        else:
+            num += c
+        prev = digit
+    return num
