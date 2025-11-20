@@ -8,5 +8,5 @@ def fatten(n):
             num += str(prev)
         else:
             num += c
-        prev = digit
+            prev = digit
     return num
